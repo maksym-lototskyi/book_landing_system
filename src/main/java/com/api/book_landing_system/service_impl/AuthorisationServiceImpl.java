@@ -1,13 +1,12 @@
 package com.api.book_landing_system.service_impl;
 
-import com.api.book_landing_system.dtos.user_dtos.LoginDto;
 import com.api.book_landing_system.dtos.user_dtos.RegisterDto;
 import com.api.book_landing_system.exceptions.ObjectAlreadyExistsException;
 import com.api.book_landing_system.model.Role;
 import com.api.book_landing_system.model.UserEntity;
 import com.api.book_landing_system.repository.RoleRepository;
 import com.api.book_landing_system.repository.UserRepository;
-import com.api.book_landing_system.service.AuthorizationService;
+import com.api.book_landing_system.service.AuthenticationService;
 import com.api.book_landing_system.verification.Verifier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AuthorisationServiceImpl implements AuthorizationService {
+public class AuthorisationServiceImpl implements AuthenticationService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder encoder;
@@ -51,10 +50,5 @@ public class AuthorisationServiceImpl implements AuthorizationService {
         else{
             throw new ObjectAlreadyExistsException("The user with such username already exists");
         }
-    }
-
-    @Override
-    public void loginUser(LoginDto loginDto) {
-
     }
 }
