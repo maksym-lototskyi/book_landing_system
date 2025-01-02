@@ -9,7 +9,6 @@ import com.api.book_landing_system.repository.UserRepository;
 import com.api.book_landing_system.service.AuthenticationService;
 import com.api.book_landing_system.verification.Verifier;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +23,7 @@ public class AuthorisationServiceImpl implements AuthenticationService {
     private final PasswordEncoder encoder;
 
     @Autowired
-    public AuthorisationServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder, AuthenticationManager authenticationManager) {
+    public AuthorisationServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder encoder) {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.encoder = encoder;
