@@ -21,7 +21,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 @Service
-public class LoanServiceImpl implements LoanService {
+class LoanServiceImpl implements LoanService {
     private final LoanRepository loanRepository;
     private final UserRepository userRepository;
     private final BookRepository bookRepository;

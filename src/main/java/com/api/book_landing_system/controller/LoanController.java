@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 public class LoanController {
     private final LoanService loanService;
 
-    @Autowired
     public LoanController(LoanService loanService) {
         this.loanService = loanService;
     }

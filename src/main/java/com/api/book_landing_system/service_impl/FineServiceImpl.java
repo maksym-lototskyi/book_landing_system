@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class FineServiceImpl implements FineService {
+class FineServiceImpl implements FineService {
     private final FineRepository fineRepository;
     private final UserRepository userRepository;
 

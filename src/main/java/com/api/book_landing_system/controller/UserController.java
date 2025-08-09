@@ -18,7 +18,6 @@ public class UserController {
     private final UserService userService;
     private final FineService fineService;
 
-    @Autowired
     public UserController(UserService userService, FineService fineService) {
         this.userService = userService;
         this.fineService = fineService;

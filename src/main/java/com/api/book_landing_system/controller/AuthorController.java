@@ -17,8 +17,6 @@ import java.util.List;
 public class AuthorController {
 
     private final AuthorService authorService;
-
-    @Autowired
     public AuthorController(AuthorService authorService) {
         this.authorService = authorService;
     }
