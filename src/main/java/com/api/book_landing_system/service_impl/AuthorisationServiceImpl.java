@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class AuthorisationServiceImpl implements AuthenticationService {
+class AuthorisationServiceImpl implements AuthenticationService {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder encoder;

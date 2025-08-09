@@ -23,8 +23,6 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final JWTUtil jwtUtil;
 
-
-    @Autowired
     public AuthController(AuthenticationService authorizationService, AuthenticationManager authenticationManager, JWTUtil jwtUtil) {
         this.authorizationService = authorizationService;
         this.authenticationManager = authenticationManager;
